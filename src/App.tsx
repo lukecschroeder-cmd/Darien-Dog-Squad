@@ -495,13 +495,31 @@ export default function App() {
 
           <div className="mt-12">
             <div className="bg-brand-sage/5 rounded-[40px] border border-brand-sage/20 p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-16">
-              <div className="w-full md:w-1/3 h-64 rounded-[32px] overflow-hidden shadow-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1541591047357-fca58bbff29d?auto=format&fit=crop&q=80&w=800" 
-                  alt="Recurring Care" 
-                  className="w-[2px] h-[2px] object-cover" 
-                  referrerPolicy="no-referrer"
-                />
+              <div className="w-full md:w-1/3 h-64 rounded-[32px] bg-brand-sage/10 border border-brand-sage/20 flex flex-col items-center justify-center relative overflow-hidden group shadow-inner shrink-0">
+                <div className="absolute -right-16 -top-16 w-48 h-48 bg-brand-sage/5 rounded-full blur-2xl group-hover:bg-brand-sage/10 transition-all duration-500" />
+                <div className="absolute -left-16 -bottom-16 w-48 h-48 bg-brand-earth/5 rounded-full blur-2xl group-hover:bg-brand-earth/10 transition-all duration-500" />
+                
+                <div className="relative flex items-center justify-center">
+                  {/* Outer spinning/repeat ring background */}
+                  <div className="absolute w-28 h-28 border border-brand-sage/20 rounded-full animate-spin-slow flex items-center justify-center">
+                    <div className="absolute -top-1 w-2 h-2 rounded-full bg-brand-sage" />
+                    <div className="absolute -bottom-1 w-2.5 h-2.5 rounded-full bg-brand-sage/60" />
+                  </div>
+                  
+                  {/* Main Icon Frame */}
+                  <div className="w-20 h-20 rounded-[24px] bg-white border border-brand-sage/10 shadow-md flex items-center justify-center relative transform group-hover:scale-105 transition-all duration-500">
+                    <Calendar size={38} className="text-brand-sage" strokeWidth={2} />
+                    
+                    {/* Repeat/Recurring emblem on top corner */}
+                    <div className="absolute -bottom-2 -right-2 bg-brand-earth text-white p-2 rounded-full shadow-lg border border-white">
+                      <Repeat size={14} className="animate-pulse" />
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-4 text-center z-10">
+                  <span className="text-[10px] font-black uppercase text-brand-sage/80 tracking-widest block">Darien Dog Squad</span>
+                </div>
               </div>
               <div className="flex-grow">
                 <div className="inline-flex items-center gap-2 bg-brand-sage/20 text-brand-sage px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">

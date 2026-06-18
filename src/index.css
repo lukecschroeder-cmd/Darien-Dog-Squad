@@ -8,4 +8,6 @@
   --color-brand-sage: #7D8E7E;
   --color-brand-cream: #FAF9F6;
   --color-brand-earth: #4A3728;
+
+  --animate-spin-slow: spin 8s linear infinite;
 }
