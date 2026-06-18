@@ -349,6 +349,13 @@ export default function App() {
       
       // Attempt to open SMS app
       window.location.href = `sms:+12035411396?body=${message}`;
+
+      // Also generate and trigger an email redirect
+      setTimeout(() => {
+        const mailSubject = encodeURIComponent(`Dog Squad Booking - ${formData.name}`);
+        const mailBody = encodeURIComponent(`Hi Darien Dog Squad!\n\nI'd like to book a session.\n\nName: ${formData.name}\nEmail: ${formData.email}\nServices: ${serviceDetails.replace(/%0D%0A/g, '\n')} (${formData.frequency})\nPet Type: ${formData.petType}\nPreferred Start Date: ${formData.date}\nAbout my pet: ${formData.details}\nEstimate: $${calculateTotal().toFixed(2)}`);
+        window.location.href = `mailto:happypups@dariendogsquad.com?subject=${mailSubject}&body=${mailBody}`;
+      }, 1000);
       
       setIsSuccess(true);
       
