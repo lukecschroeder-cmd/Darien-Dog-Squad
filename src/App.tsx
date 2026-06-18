@@ -646,7 +646,7 @@ export default function App() {
                     </div>
                     <div>
                       <p className="text-xs text-white/60 uppercase font-bold tracking-widest">Email Us</p>
-                      <p className="font-bold">henryrsymons@gmail.com</p>
+                      <p className="font-bold">happypups@dariendogsquad.com</p>
                     </div>
                   </div>
                 </div>
