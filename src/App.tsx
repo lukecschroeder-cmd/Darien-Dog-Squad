@@ -20,6 +20,8 @@ import {
   Check
 } from 'lucide-react';
 import { cn } from './lib/utils';
+// @ts-ignore
+import cartoonPoop from './assets/images/cartoon_element_poop_1781742490341.jpg';
 
 // --- Components ---
 
@@ -469,7 +471,7 @@ export default function App() {
               title="Poop Cleanup"
               description="Keep your yard pristine and your family safe. We provide thorough waste removal for residential yards, with pricing based on your yard size."
               price="$15"
-              image="https://images.unsplash.com/photo-1558904541-efa8c196b27d?auto=format&fit=crop&q=80&w=800"
+              image={cartoonPoop}
               benefits={[
                 "Thorough perimeter-to-perimeter sweep",
                 "Safe removal of all pet waste",
